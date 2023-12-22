@@ -7,7 +7,7 @@ local vcshFiles = function(opts)
 	pickers
 		.new(opts, {
 			prompt_title = "Find Files in vcsh",
-			finder = finders.new_oneshot_job({ "vcsh-ls-files" }, opts),
+			finder = finders.new_oneshot_job({ "vcsh", "list-tracked" }, opts),
 			sorter = conf.file_sorter(opts),
 		})
 		:find()
